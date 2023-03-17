@@ -1,19 +1,29 @@
 #include <stdio.h>
 /*Author: Itallo Rodrigues Moreno*/
  
+
+
 int main() {
- 
-   int i,x;
-
-
-   scanf("%d",&x);
-
-   for(i = 0 ; i <= x ; i++){
-
-        if( i % 2 == 1 ){
-            printf("%d\n",i);
+    
+int cont,n1,n2,temp,soma;
+    while(scanf("%d%d",&n1,&n2)==2){
+        soma=0;
+        if(n1>n2){temp=n1;
+            n1=n2;
+            n2=temp;
         }
-   }
+        if(n1%2!=0){for(cont=n1+2;cont<n2;cont++){
+            if(cont%2!=0)
+                soma+=cont;
+            }
+        }
+        else{for(cont=n1+1;cont<n2;cont++){
+            if(cont%2!=0)
+                soma+=cont;
+            }
+        }
+        printf("%d\n",soma);
+    }
 
     return 0;
 }

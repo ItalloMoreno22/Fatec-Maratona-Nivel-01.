@@ -1,36 +1,25 @@
-
-
-
-
-
 #include <stdio.h>  
 /*
 Author: Itallo Rodrigues Moreno*/
 
-int main ()
-{
-	
-    
- 	int number, i;
 
-    for(i=0; i<6; i++){
+int main() {
+ float  num,total,media;
+  int cont,totalnum;
+     totalnum = 0;
+     total = 0;
+     media = 0;
+  
+        for (cont = 1; cont <= 6; cont++) {
+          scanf("%f", &num);
+        if (num > 0) {
+          totalnum += 1;
+          total += num;
+       }
+      }
+      media = total / totalnum;
 
-	printf("Digite um numero: "); scanf("%d", &number);
-
-	if(number>0)
-	{
-	printf("%d e positivo", number);
-	}
-	
-	else if(number<0)
-	{
-	printf("%d e negativo", number);
-	}
-	
-	else
-	{
-	printf("%d e nulo", number);
-	}
-    }
-return 0;
+     printf("%d valores positivos\n", totalnum);
+     printf("%.1f\n",media);
+    return 0;
 }
